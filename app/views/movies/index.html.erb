@@ -2,16 +2,15 @@
   List of all movies
 </h1>
 
-<h2>
+<!--<h2>-->
 <%#=details_path(1)%>
 <%#=details_url(1)%>
-</h2>
-
+<!--</h2>
+-->
 <hr>
 
 <div>
-  <!--<a href="/movies/new">Add a new movie</a>-->
-  <a href="<%=new_movie_path%>">Add a new movie</a>
+  <%=link_to "Add a new movie", new_movie_path%>
 </div>
 </div>
 
@@ -65,9 +64,11 @@
     </td>
 
     <td>
-      <a href="<%= movie_path(a_movie) %>">
+      <!--<a href="<%#= movie_path(a_movie) %>">
         Show details
-      </a>
+      </a>-->
+      <%#= link_to "Show details", movie_path(a_movie)%>
+      <%= link_to "Show details", a_movie%>
     </td>
   </tr>
   <% end %>
