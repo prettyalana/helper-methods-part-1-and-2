@@ -5,16 +5,31 @@
 <% end %>
 
 <%= form_with(url: movie_path(@movie), method: :patch, data: { turbo: false}) do %>
-
+  
   <div>
     <%= label_tag :title_box, "Title"%>
-    <%= text_field_tag :title, @movie.title, {id: "title_box"}%>
-  </div>
+  <%= text_field_tag :title, @movie.title, {id: "title_box"}%>
+    </div>
 
   <div>
     <%= label_tag :description_box, "Description"%>
-    <%= text_area_tag :description, @movie.description, {id: "description_box", rows: 3} %>
-  </div>
+  <%= text_area_tag :description, @movie.description, {id: "description_box", rows: 3} %>
+    </div>
 
   <%=button_tag "Update Movie"%>
-<% end %>
+  <% end %>
+
+  <%#= form_with(model: @movie, method: :patch, data: { turbo: false}) do |form| %>
+<!--
+    <div>
+      <%#= form.label :title%>-->
+      <%#= form.text_field :title, {id: "title_box"}%>
+<!--    </div>
+
+    <div>
+      <%#= form.label :description%>-->
+      <%#= form.text_area :description, {rows: 3} %>
+<!--    </div>
+
+    <%#=form.button%>-->
+  <%# end %>

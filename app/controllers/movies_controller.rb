@@ -18,8 +18,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-
-   @movie = Movie.find(params.fetch(:id))
+    @movie = Movie.find(params.fetch(:id))
 
     # render template: "movies/show"
   end
@@ -39,7 +38,6 @@ class MoviesController < ApplicationController
   end
 
   def edit
-
     @movie = Movie.find(params.fetch(:id))
 
     # render template: "movies/edit"
