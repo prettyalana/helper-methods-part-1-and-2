@@ -2,11 +2,11 @@
   List of all movies
 </h1>
 
-<!--<h2>-->
-<%#=details_path(1)%>
-<%#=details_url(1)%>
-<!--</h2>
--->
+<!--<form action="">
+  <input name="zebra[alana]">
+  <input name="zebra[alana]" >
+  <button>Submit</button>
+</form>-->
 <hr>
 
 <div>
@@ -43,33 +43,33 @@
   </tr>
 
   <% @movies.each do |a_movie| %>
-  <tr>
-    <td>
-      <%= a_movie.id %>
-    </td>
+    <tr>
+      <td>
+        <%= a_movie.id %>
+      </td>
 
-    <td>
-      <%= a_movie.title %>
-    </td>
+      <td>
+        <%= a_movie.title %>
+      </td>
 
-    <td>
-      <%= a_movie.description %>
-    </td>
+      <td>
+        <%= a_movie.description %>
+      </td>
 
-    <td>
-      <%= time_ago_in_words(a_movie.created_at) %> ago
-    </td>
-    <td>
-      <%= time_ago_in_words(a_movie.updated_at) %> ago
-    </td>
+      <td>
+        <%= time_ago_in_words(a_movie.created_at) %> ago
+      </td>
+      <td>
+        <%= time_ago_in_words(a_movie.updated_at) %> ago
+      </td>
 
-    <td>
-      <!--<a href="<%#= movie_path(a_movie) %>">
+      <td>
+        <!--<a href="<%#= movie_path(a_movie) %>">
         Show details
       </a>-->
-      <%#= link_to "Show details", movie_path(a_movie)%>
-      <%= link_to "Show details", a_movie%>
-    </td>
-  </tr>
+        <%#= link_to "Show details", movie_path(a_movie)%>
+        <%= link_to "Show details", a_movie%>
+      </td>
+    </tr>
   <% end %>
 </table>
